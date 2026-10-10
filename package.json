@@ -1,0 +1,39 @@
+{
+  "name": "habitly",
+  "version": "1.0.0",
+  "description": "Habit tracker",
+  "author": "Your Name",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.example.habitly",
+    "productName": "Habitly",
+    "files": [
+      "main.js",
+      "index.html",
+      "css/**",
+      "js/**",
+      "icons/**",
+      "manifest.webmanifest",
+      "sw.js"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icons/icon-512.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "allowScripts": {
+    "electron@33.4.11": true
+  }
+}
